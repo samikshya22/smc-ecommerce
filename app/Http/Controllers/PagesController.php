@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
    public function home()
    {
-      $name="Ram";
+      $name="Samu";
     return view('welcome',compact('name'));
    }
    public function about()
