@@ -12,14 +12,16 @@
         <th class="border border-gray-100 p-2 bg-gray-300">Category Name</th>
         <th class="border border-gray-100 p-2 bg-gray-300">Action</th>
     </tr>
+    @foreach($categories as $category)
     <tr>
-        <td class="border p-2 border-gray-300">1</td>
-        <td class="border p-2 border-gray-300">Electronics</td>
+        <td class="border p-2 border-gray-300">{{$category->priority}}</td>
+        <td class="border p-2 border-gray-300">{{$category->categoryname}}</td>
         <td class="border p-2 border-gray-300">
         <a href="" class="bg-blue-600 tex-white px-2 py-1 rounded mx-1">Edit</a>
         <a href="" class="bg-red-600 tex-white px-2 py-1 rounded mx-1">Delete</a>
         </td>
     </tr>
+    @endforeach
     <tr>
         <td class="border p-2 border-gray-300">2</td>
         <td class="border p-2 border-gray-300">Furniture</td>
@@ -29,6 +31,6 @@
 
         </td>
     </tr>
-
+    
 </table>
 @endsection

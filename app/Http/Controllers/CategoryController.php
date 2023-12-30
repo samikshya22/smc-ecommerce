@@ -9,7 +9,9 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        return view('category.index');
+        // $categories = Category::all();
+        $categories = Category::orderBy('priority')->get();
+        return view('category.index',compact('categories'));
     }
 
     public function create()
